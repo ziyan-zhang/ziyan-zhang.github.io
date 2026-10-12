@@ -1,74 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="styles.css"> <!-- 引入外部 CSS 文件 -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>示例页面</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ziyan Zhang — Ph.D. student at Sun Yat-sen University. Research in file systems, storage systems, and GPU-initiated I/O.">
+  <title>Ziyan Zhang | Systems Research</title>
+  <link rel="canonical" href="https://ziyan-zhang.github.io/">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<body class="dark-mode">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Ziyan Zhang home">ZZ<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">Dark mode</button>
+      </nav>
+    </header>
 
+    <main id="top">
+      <section class="hero" id="about" aria-labelledby="name">
+        <div class="hero-main">
+          <p class="eyebrow">Computer Systems · Storage · GPU I/O</p>
+          <h1 id="name">Ziyan Zhang <span lang="zh-Hans" class="chinese-name">张子岩</span></h1>
+          <p class="hero-subtitle">Ph.D. Student · School of Computer Science and Engineering<br>Sun Yat-sen University, Guangzhou, China</p>
+          <p class="intro">I work on computer systems, with a focus on file-system scalability and storage-system design. My current research explores GPU-initiated storage and the interaction between storage and large language model inference.</p>
+          <div class="profile-links" aria-label="Profiles and contact">
+            <a href="mailto:zhangzy273@mail2.sysu.edu.cn">Email <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/ziyan-zhang" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://orcid.org/0009-0006-6429-3991" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="hero-side" aria-label="Research highlights">
+          <div class="side-label">Research at a glance</div>
+          <div class="focus-point"><span class="focus-index">01</span><span>File systems &amp; journaling</span></div>
+          <div class="focus-point"><span class="focus-index">02</span><span>GPU-initiated storage</span></div>
+          <div class="focus-point"><span class="focus-index">03</span><span>Storage for LLM inference</span></div>
+        </aside>
+      </section>
 
-<div class="container">
-    <div>
-        <p style="font-size:100px">&#128521;</p>
-        <p>Hello 大家好</p>
-        <p>我是张子岩，这是我的个人网站</p>
-        <p>Welcome，你可以在以下的网站找到我</p>
-        <ul>
-          <a href="https://github.com/ziyan-zhang"> <i class="fab fa-github"></i> github 仓库</i></a>
-        </ul>
-    </div>
+      <section class="section" id="research" aria-labelledby="research-heading">
+        <div class="section-heading">
+          <p class="section-kicker">Research</p>
+          <h2 id="research-heading">What I work on</h2>
+        </div>
+        <p class="section-lead">My interests span operating systems and I/O stacks, from concurrency and persistence in file-system journaling to GPU-driven data access and storage-aware inference.</p>
+        <div class="interest-tags" aria-label="Research interests">
+          <span>File systems</span><span>Storage systems</span><span>Operating systems</span><span>GPU I/O</span><span>LLM inference &amp; storage</span>
+        </div>
+      </section>
 
+      <section class="section" id="publications" aria-labelledby="publications-heading">
+        <div class="section-heading">
+          <p class="section-kicker">Publications</p>
+          <h2 id="publications-heading">Selected publications</h2>
+        </div>
 
-    <div class="bordered-paragraph border-green">
-        <p>Now working on file system and operating system.</p>
-        <p>Looking forward to the publication of my debut paper &#128198;</p>
-    </div>
-    <!-- 换行 -->
-    <br>
-    <div class="bordered-paragraph border-blue">
-      <p>Previously works on image processing &#128693;</p>
-      <ul>
-        <li>Lu, Z., <b>Zhang, Z.</b>, Wang, Y., Dong, L., & Liang, S. (2021). SEM image quality assessment based on texture inpainting. IEICE Transactions on Information and Systems, 104(2), 341-345.
-          <ul>
-            <li><a href="https://www.jstage.jst.go.jp/article/transinf/E104.D/2/E104.D_2020EDL8123/_article/-char/ja/">paper</a></li>
-            <li><a href="https://github.com/ziyan-zhang/TI-SEM-IQA">code</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-</div>
+        <article class="publication">
+          <div class="publication-year">2026</div>
+          <div class="publication-content">
+            <div class="pub-meta"><span class="venue">ACM TACO</span><span class="status">Accepted</span></div>
+            <h3>StrataJ: Enhancing File System Journaling Scalability via Adaptive Concurrency Control and Full-Stack Optimizations</h3>
+            <p class="authors"><strong>Ziyan Zhang</strong>, Yubo Liu, Yongfeng Wang, Yuanyin Zhang, Shaoyin Huang, Yuxiao Han, Jinhui Wei, Yizhuo Rao, Languang Gao, Zhiguang Chen, and Yutong Lu.</p>
+            <p class="pub-details">ACM Transactions on Architecture and Code Optimization · Accepted for publication, 2026</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1145/3858621" target="_blank" rel="noopener noreferrer">DOI: 10.1145/3858621 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
 
+        <article class="publication">
+          <div class="publication-year">2026</div>
+          <div class="publication-content">
+            <div class="pub-meta"><span class="venue">HPDC '26</span><span class="status published">Published</span></div>
+            <h3>POLAR-PIC: A Holistic Framework for Matrixized PIC with Co-Designed Compute, Layout, and Communication</h3>
+            <p class="authors">Yizhuo Rao, Xingjian Cui, Shangzhi Pang, Jiabin Xie, Guangnan Feng, Jinhui Wei, <strong>Ziyan Zhang</strong>, Languang Gao, Zhenyu Wang, Zhiguang Chen, and Yutong Lu.</p>
+            <p class="pub-details">35th International Symposium on High-Performance Parallel and Distributed Computing (HPDC), 2026</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1145/3806645.3807574" target="_blank" rel="noopener noreferrer">Paper / DOI <span aria-hidden="true">↗</span></a>
+              <a href="https://arxiv.org/abs/2604.19337" target="_blank" rel="noopener noreferrer">arXiv <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-year">2021</div>
+          <div class="publication-content">
+            <div class="pub-meta"><span class="venue">IEICE Trans. Inf. &amp; Syst.</span></div>
+            <h3>SEM Image Quality Assessment Based on Texture Inpainting</h3>
+            <p class="authors">Z. Lu, <strong>Z. Zhang</strong>, Y. Wang, L. Dong, and S. Liang.</p>
+            <p class="pub-details">IEICE Transactions on Information and Systems, 104(2), 341–345, 2021</p>
+            <div class="pub-links">
+              <a href="https://www.jstage.jst.go.jp/article/transinf/E104.D/2/E104.D_2020EDL8123/_article/-char/ja/" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/ziyan-zhang/TI-SEM-IQA" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Ziyan Zhang</span>
+      <span>Built as a lightweight GitHub Pages site · <a href="mailto:zhangzy273@mail2.sysu.edu.cn">Get in touch</a></span>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var button = document.getElementById('theme-toggle');
+      var saved = null;
+      try { saved = window.localStorage.getItem('zz-theme'); } catch (e) {}
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      function applyTheme(isDark) {
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        button.textContent = isDark ? 'Light mode' : 'Dark mode';
+        button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+      applyTheme(dark);
+      button.addEventListener('click', function () {
+        dark = !dark;
+        applyTheme(dark);
+        try { window.localStorage.setItem('zz-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      });
+    }());
+  </script>
 </body>
-
-
-
-<button id="theme-button">切换颜色模式</button>
-
-<script>
-  document.getElementById('theme-button').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-  });
-
-window.onload = function() {
-  var greenElement = document.querySelector('.border-green');
-  var blueElement = document.querySelector('.border-blue');
-
-  var greenWidth = greenElement.offsetWidth;
-  var blueWidth = blueElement.offsetWidth;
-
-  var maxWidth = Math.max(greenWidth, blueWidth);
-
-  greenElement.style.width = maxWidth + 'px';
-  blueElement.style.width = maxWidth + 'px';
-};
-</script>
-
-
 </html>
-
