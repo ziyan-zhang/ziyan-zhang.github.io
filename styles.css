@@ -95,3 +95,75 @@ h3 { font-size: 1.15rem; line-height: 1.48; letter-spacing: -0.012em; margin-bot
   .profile-links a { padding: 7px 11px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* A warmer and more relaxed homepage. */
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --accent: #32688d;
+  --accent-soft: #eaf3f5;
+  --border: #e5e5e0;
+  --eyebrow: #68838b;
+}
+:root[data-theme="dark"] {
+  --bg: #131c24;
+  --surface: #1a2933;
+  --accent: #a2d5e6;
+  --accent-soft: #2c4350;
+  --border: #33434d;
+  --eyebrow: #b0c8cd;
+}
+body { font-family: "Segoe UI", "Noto Sans", "Microsoft YaHei", Arial, sans-serif; }
+.hero {
+  grid-template-columns: minmax(0, 1.45fr) minmax(235px, .83fr);
+  position: relative;
+  align-items: center;
+  padding: 58px 36px 66px;
+  margin: 23px -36px 0;
+  border-radius: 24px;
+  background: radial-gradient(ellipse at 92% 14%, rgba(250, 216, 167, .26), transparent 45%),
+    radial-gradient(ellipse at 4% 94%, rgba(154, 203, 208, .16), transparent 49%);
+}
+.hero-subtitle { color: var(--text); }
+.intro { max-width: 620px; line-height: 1.85; }
+.hero-photo {
+  min-width: 0;
+  max-width: 315px;
+  margin: 0 0 0 auto;
+  padding: 9px 9px 0;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 45px rgba(41, 49, 53, .10);
+  transform: rotate(1.4deg);
+}
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 9px;
+  background: #d7d6d1;
+}
+.hero-photo figcaption {
+  font-size: .78rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 10px 3px 12px;
+  line-height: 1.4;
+}
+.section { padding-top: 49px; padding-bottom: 53px; }
+.publication { grid-template-columns: 74px minmax(0, 1fr); gap: 22px; padding: 22px 0 25px; }
+.publication-content { min-width: 0; }
+.publication h3 { font-size: 1.105rem; letter-spacing: normal; }
+.publication .authors { word-spacing: normal; letter-spacing: normal; }
+.site-nav { column-gap: 22px; row-gap: 8px; }
+.site-nav a, .wordmark { white-space: nowrap; }
+.profile-links a { border-radius: 25px; }
+.interest-tags span { background: var(--surface); border: 1px solid var(--border); font-weight: 500; }
+@media (max-width:760px) {
+  .hero { grid-template-columns: minmax(0,1fr); padding: 34px 22px 42px; margin: 18px -12px 0; gap: 34px; border-radius: 18px; }
+  .hero-photo { width: min(295px, 100%); margin: 0 auto; transform: rotate(.8deg); }
+  .site-nav { column-gap: 12px; }
+}
